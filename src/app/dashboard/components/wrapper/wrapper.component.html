@@ -1,0 +1,54 @@
+<mat-toolbar class="mat-elevation-z8">
+  <button mat-icon-button>
+    <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+  </button>
+ 
+  WELCOME!
+</mat-toolbar>
+
+  <mat-sidenav-container autosize>
+    <mat-sidenav #sidenav mode="side" opened="false" class="mat-elevation-z8">
+    
+      
+      <mat-nav-list>
+        <img class="avatar mat-elevation-z8" src="https://image.flaticon.com/icons/png/128/219/219969.png">
+        <h4 class="name">Jigyasa Wadhwani</h4>
+  
+
+        <mat-divider></mat-divider>
+
+        <mat-list-item [routerLink]="'home'">
+          <mat-icon mat-list-icon [ngStyle]="{'color':'white'}">home</mat-icon>
+          <span class="home">Home</span>
+        </mat-list-item>
+        
+        <mat-list-item [routerLink]="'profile'">
+          <mat-icon mat-list-icon [ngStyle]="{'color':'white'}">person</mat-icon>
+          <span class="profile">Profile</span>
+        </mat-list-item>
+        
+        <mat-list-item [routerLink]="'dashboard'">
+          <mat-icon mat-list-icon [ngStyle]="{'color':'white'}">dashboard</mat-icon>
+          <span class="dashboard">Dashboard</span>
+        </mat-list-item>
+        
+        
+        <mat-list-item [routerLink]="'help'">
+          <mat-icon mat-list-icon [ngStyle]="{'color':'white'}">info</mat-icon>
+          <span class="help">Help</span>
+        </mat-list-item>
+  
+  
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+
+  </mat-sidenav-container>
+  
+
+
+
+
